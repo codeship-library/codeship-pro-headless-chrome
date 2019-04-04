@@ -1,0 +1,10 @@
+app:
+  build:
+    dockerfile: Dockerfile.app
+  depends_on:
+    - chrome
+  volumes:
+    - ./screenshots:/screenshots
+chrome:
+  build:
+    dockerfile: Dockerfile.chrome
